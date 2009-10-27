@@ -1,0 +1,47 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../Style.css">
+	<title>Open movilforum Windows MFC SDK</title>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1><a href="http://open.movilforum.com"></a></h1>
+	</div>
+
+	<div id="sidebar">
+		<iframe src ="../Sidebar.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+	<div id="content">
+		<h3>CSMSReceiver::CSMSReceiver</h3>
+
+		Connects to POP server<br><br>
+
+		<font face="Courier New">CSMSReceiver(tagCBMessages pCallbackFunction, DWORD dwCookie, CString csServer, CString csLogin, CString csPassword);</font><br><br>
+
+		<b>Parameters</b><br>
+		<i>pCallbackFunction</i><br>
+		&nbsp;&nbsp;Specifies the address of the application-supplied callback function that will process the messages<br><br>
+		<i>dwCookie</i><br>
+		&nbsp;&nbsp;Address of the callback function owner<br><br>
+		<i>csServer</i><br>
+		&nbsp;&nbsp;String with POP server<br><br>
+		<i>csLogin</i><br>
+		&nbsp;&nbsp;String with POP user's login<br><br>
+		<i>csPassword</i><br>
+		&nbsp;&nbsp;String with POP user's password<br><br>
+
+		<b>Return</b><br>
+		None<br><br>
+
+		<b>Remarks</b><br>
+		<i>pCallbackFunction</i> function need not be named <b>ReceptionFinished</b>, but it must be declared as follows:<br><br>
+		<font face="Courier New">void CALLBACK EXPORT ReceptionFinished(DWORD dwCookie, CStringList& slMessages);</font><br><br>
+		where <i>slMessages</i> contains the list of received SMS messages.
+
+	</div>
+</div>
+</body>
+</html>

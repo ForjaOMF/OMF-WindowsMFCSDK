@@ -1,0 +1,147 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../Style.css">
+	<title>Open movilforum Windows MFC SDK</title>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1><a href="http://open.movilforum.com"></a></h1>
+	</div>
+
+	<div id="sidebar">
+		<iframe src ="../Sidebar.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+	<div id="content">
+		<h3>class CSMS20</h3>
+
+		<b>class CSMS20 : public CObject</b><br>
+		<font size=-2>
+			&nbsp;&nbsp;&nbsp;&nbsp;<b>Source file(s): </b><a href="../../Classes/SMS20.cpp">SMS20.cpp</a>; <a href="../../Classes/SMS20.h">SMS20.h</a>
+		</font><br><br>
+
+		This class provides access to the SMS2.0 service that allows us to send instant messages to our contacts through an HTTP interface.<br><br>
+
+		SMS 2.0 service gives you the capability to detect presence status of your contacts. You can chat with them via SMS messages when they are offline. If any of your contact is online, he will receive your messages instantly, as with other IMS services (MSN, Yahoo, etc.).<br><br>
+		This API allows you to perform the following operations:<br><br>
+		<ul>
+			<li>Log into the SMS2.0 service. You will only need your telephone number and password.
+			<li>Retrieve your contact list.
+			<li>Get presence status for your contacts.
+			<li>Add contacts to your contact list. You will only need your contact's telephone number.
+			<li>Poll for notifications from the service. These notifications can be:
+			<ul>
+				<li>Change in presence status for any of your contacts.
+				<li>New message received.
+				<li>Request from another user to add you to his/her contact list. You must respond to this notification allowing (or not) the other user to add you you.
+			</ul>
+			<li>Remove a contact from your list..
+			<li>Log out from the service.
+		</ul>
+		<br>
+		You can check billing information <a href="http://www.movistar.es/fwk/cda/controller/page/0,2190,8887_42768051_1737793_0_0,00.html#tarifas">here</a><br><br>
+		<b>Methods</b>
+		<table border=1 width=100%>
+			<tr>
+				<td><a href="SMS20API_Login.html">Login</a></td>
+				<td>Performs login to movistar web site</td>
+			</tr>
+			<tr>
+				<td><a href="SMS20API_Connect.html">Connect</a></td>
+				<td>Connects to SMS2.0 service</td>
+			</tr>
+			<tr>
+				<td><a href="SMS20API_Polling.html">Polling</a></td>
+				<td>Performs polling to search for new message notifications, contacts online, etc...</td>
+			</tr>
+			<tr>
+				<td><a href="SMS20API_AddContact.html">AddContact</a></td>
+				<td>Adds a contact to the user's contact list</td>
+			</tr>
+			<tr>
+				<td><a href="SMS20API_AuthorizeContact.html">AuthorizeContact</a></td>
+				<td>Authorizes a contact to be informed about our presence status</td>
+			</tr>
+			<tr>
+				<td><a href="SMS20API_DeleteContact.html">DeleteContact</a></td>
+				<td>Deletes a contact</td>
+			</tr>
+			<tr>
+				<td><a href="SMS20API_SendMessage.html">SendMessage</a></td>
+				<td>Sends a message to the destination contact</td>
+			</tr>
+			<tr>
+				<td><a href="SMS20API_Disconnect.html">Disconnect</a></td>
+				<td>Disconnects from SMS2.0 service</td>
+			</tr>
+		</table>
+
+		<h3>class CSMS20Helper</h3>
+
+		<b>class CSMS20Helper : public CObject</b><br><br>
+
+		The <b>CSMS20Helper</b> class provides helper functions to parse SMS2.0 service responses, convert between differente text encondings, etc.<br><br>
+		<b>Methods</b>
+		<table border=1 width=100%>
+			<tr>
+				<td><a href="SMS20Helper_ASCII2UTF8.html">ASCII2UTF8</a></td>
+				<td>Converts text from ASCII to UTF8</td>
+			</tr>
+			<tr>
+				<td><a href="SMS20Helper_UTF82ASCII.html">UTF82ASCII</a></td>
+				<td>Converts text from UTF8 to ASCII</td>
+			</tr>
+			<tr>
+				<td><a href="SMS20Helper_GetContactPresence.html">GetContactPresence</a></td>
+				<td>Obtains contacts presence status from received XML</td>
+			</tr>
+			<tr>
+				<td><a href="SMS20Helper_SearchAuthorizePresence.html">SearchAuthorizePresence</a></td>
+				<td>Retrieves UserID for the contact that wants to know our presence status</td>
+			</tr>
+			<tr>
+				<td><a href="SMS20Helper_SearchTransactionId.html">SearchTransactionId</a></td>
+				<td>Retrieves TransactionID for an incoming request</td>
+			</tr>
+			<tr>
+				<td><a href="SMS20Helper_SearchMessage.html">SearchMessage</a></td>
+				<td>Retrieves sender and text of a received message</td>
+			</tr>
+		</table>
+
+		<h3>class CSMS20Contact</h3>
+
+		<b>class CSMS20Contact : public CObject</b><br><br>
+
+		The <b>CSMS20Contact</b> class encapsulates a contact of SMS2.0 service.<br><br>
+
+		<b>Members</b>
+		<table border=1 width=100%>
+			<tr>
+				<td><a href="SMS20Contact_UserID.html">m_csUserID</a></td>
+				<td>UserID of the contact</td>
+			</tr>
+			<tr>
+				<td><a href="SMS20Contact_Alias.html">m_csAlias</a></td>
+				<td>Alias of the contact</td>
+			</tr>
+			<tr>
+				<td><a href="SMS20Contact_Present.html">m_bPresent</a></td>
+				<td>Presence status of the contact</td>
+			</tr>
+		</table>
+
+		<br>
+		<h3>Sample Code</h3>
+		<table border=1 width=100%>
+			<tr>
+				<td><a href="../Samples/SMS20Sample.html">SMS 2.0</a></td>
+				<td>Sample code to show how to use SMS2.0 service</td>
+			</tr>
+		</table>
+	</div>
+</div>
+</body>
+</html>

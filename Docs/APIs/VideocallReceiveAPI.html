@@ -1,0 +1,85 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../Style.css">
+	<title>Open movilforum Windows MFC SDK</title>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1><a href="http://open.movilforum.com"></a></h1>
+	</div>
+
+	<div id="sidebar">
+		<iframe src ="../Sidebar.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+	<div id="content">
+		<h3>class CVideoCallReceiver</h3>
+
+		<b>class CVideoCallReceiver : public CObject</b><br>
+		<font size=-2>
+			&nbsp;&nbsp;&nbsp;&nbsp;<b>Source file(s): </b><a href="../../Classes/VideoCallReceiver.cpp">VideoCallReceiver.cpp</a>; <a href="../../Classes/VideoCallReceiver.h">VideoCallReceiver.h</a>
+		</font><br><br>
+
+		This class provides the capability of receiving videocalls in your PC.<br><br>
+
+		To use this service you must register <a href="https://videollamada.movistar.es/projects/bidir/index.osp?action=pre_reg">here</a>.<br><br>
+
+		<b>Methods</b>
+		<table border=1 width=100%>
+			<tr>
+				<td><a href="VideocallReceiveAPI_CVideoCallReceiver.html">CVideoCallReceiver</a></td>
+				<td>Constructor</td>
+			</tr>
+			<tr>
+				<td><a href="VideocallReceiveAPI_RegisterAttempt.html">RegisterAttempt</a></td>
+				<td>Starts registering process</td>
+			</tr>
+			<tr>
+				<td><a href="VideocallReceiveAPI_Unregister.html">Unregister</a></td>
+				<td>Unregisters you from the service</td>
+			</tr>
+			<tr>
+				<td><a href="VideocallReceiveAPI_SetStartCallCB.html">SetStartCallCB</a></td>
+				<td>Sets the callback notifying function for a new received videocall</td>
+			</tr>
+			<tr>
+				<td><a href="VideocallReceiveAPI_SetEndCallCB.html">SetEndCallCB</a></td>
+				<td>Sets the callback notifying function for an ending videocall</td>
+			</tr>
+		</table>
+
+		<h3>class CVideoCall</h3>
+
+		<b>class CVideoCall : public CObject</b><br>
+		<font size=-2>
+			&nbsp;&nbsp;&nbsp;&nbsp;<b>Source file(s): </b><a href="../../Classes/VideoCall.cpp">VideoCall.cpp</a>; <a href="../../Classes/VideoCall.h">VideoCall.h</a>
+		</font><br><br>
+
+		This class implements a videocall object.<br><br>
+
+		<b>Methods</b>
+		<table border=1 width=100%>
+			<tr>
+				<td>GetStartTime</td>
+				<td>Retrieves a string with the date and time when the call started</td>
+			</tr>
+			<tr>
+				<td>GetFrom</td>
+				<td>Retrieves a string with the calling party MSISDN</td>
+			</tr>
+		</table>
+
+		<br>
+		<b>Sample Code</b>
+		<table border=1 width=100%>
+			<tr>
+				<td><a href="../Samples/VideoCallSample.html">Videocall Receiver</a></td>
+				<td>Sample code to show how to use VideocallReceiver API</td>
+			</tr>
+		</table>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../Style.css">
+	<title>Open movilforum Windows MFC SDK</title>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1><a href="http://open.movilforum.com"></a></h1>
+	</div>
+
+	<div id="sidebar">
+		<iframe src ="../Sidebar.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+	<div id="content">
+		<h3>class CSMSReceiver</h3>
+
+		<b>class CSMSReceiver : public CObject</b><br>
+		<font size=-2>
+			&nbsp;&nbsp;&nbsp;&nbsp;<b>Source file(s): </b><a href="../../Classes/SMSReceiver.cpp">SMSReceiver.cpp</a>; <a href="../../Classes/SMSReceiver.h">SMSReceiver.h</a>
+		</font><br><br>
+
+		This class provides the capability of receiving SMS messages through a POP interface.<br><br>
+
+		This API allows you to receive SMS messages in your email account.<br><br>
+		Messages must be sent to a defined telephone number that you will be assigned.<br><br>
+		To get such number you have to send the following SMS message:<br><br>
+
+		<table bgcolor="#E2F9C0">
+			<tr>
+				<td><font face="Courier New" color="#00007f">Destination:</font></td>
+				<td><font face="Courier New" color="#00007f">638444900</font></td>
+			</tr>
+			<tr>
+				<td><font face="Courier New" color="#00007f">Text:</font></td>
+				<td><font face="Courier New" color="#00007f">ALTA name@domain.com</font></td>
+			</tr>
+		</table>
+		<br>
+
+		You will receive an email message in the provided address with the assigned telephone number (6384449xx) and a confirmation URL that you will have to follow within the following 2 hours to end registration process.<br><br>
+
+		SMS messages sent to the assigned number (6384449xx) can then be retrieved from the given email address.<br><br>
+
+		<b>This API is free and available for any subscriber of any mobile operator.</b><br><br>
+
+		To unregister from this service you have to send the following SMS message:<br><br>
+
+		<table bgcolor="#E2F9C0">
+			<tr>
+				<td><font face="Courier New" color="#00007f">Destination:</font></td>
+				<td><font face="Courier New" color="#00007f">638444900</font></td>
+			</tr>
+			<tr>
+				<td><font face="Courier New" color="#00007f">Text:</font></td>
+				<td><font face="Courier New" color="#00007f">BAJA</font></td>
+			</tr>
+		</table>
+		<br>
+
+		<b>Methods</b>
+		<table border=1 width=100%>
+			<tr>
+				<td><a href="SMSReceiveAPI_CSMSReceiver.html">CSMSReceiver</a></td>
+				<td>Constructor</td>
+			</tr>
+			<tr>
+				<td><a href="SMSReceiveAPI_Start.html">Start</a></td>
+				<td>Starts retrieving of SMS messages via POP server</td>
+			</tr>
+		</table>
+
+		<br>
+		<b>Sample Code</b>
+		<table border=1 width=100%>
+			<tr>
+				<td><a href="../Samples/SMSReceiverSample.html">SMS Receiver</a></td>
+				<td>Sample code to show how to use SMSReceiver API</td>
+			</tr>
+		</table>
+	</div>
+</div>
+</body>
+</html>

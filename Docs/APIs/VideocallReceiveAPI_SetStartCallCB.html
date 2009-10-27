@@ -1,0 +1,38 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../Style.css">
+	<title>Open movilforum Windows MFC SDK</title>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1><a href="http://open.movilforum.com"></a></h1>
+	</div>
+
+	<div id="sidebar">
+		<iframe src ="../Sidebar.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+	<div id="content">
+		<h3>CVideoCallReceiver::SetStartCallCB</h3>
+
+		Sets the function that will be called when you receive a new videocall<br><br>
+
+		<font face="Courier New">void SetStartCallCB(tagCBStartCall pStartCall);</font><br><br>
+
+		<b>Parameters</b><br>
+		<i>pStartCall</i><br>
+		&nbsp;&nbsp;Specifies the address of the application-supplied callback function<br><br>
+
+		<b>Return</b><br>
+		None<br><br>
+
+		<b>Remarks</b><br>
+		<i>pStartCall</i> function need not be named <b>StartCall</b>, but it must be declared as follows:<br><br>
+		<font face="Courier New">static void StartCall(DWORD dwCookie, CVideoCall* pVCall);</font><br><br>
+
+	</div>
+</div>
+</body>
+</html>
